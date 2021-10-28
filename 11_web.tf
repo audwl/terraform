@@ -22,9 +22,9 @@ resource "aws_instance" "mjkim_weba" {
     private_ip = "10.0.0.11"
     subnet_id = aws_subnet.mjkim-puba.id
     user_data = file("../../Desktop/install_seoul.sh")
-
+}
     tags = {
       name = "mjkim-weba"
-    }
+    
   
 }
