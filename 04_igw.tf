@@ -1,5 +1,5 @@
-resource "aws_internet_gateway" "mjkim-ig" {
-  vpc_id = aws_vpc.mjkim-vpc.id
+resource "aws_internet_gateway" "mjkim_ig" {
+  vpc_id = aws_vpc.mjkim_vpc.id
   tags = {
     Name = "mjkim-ig"
   }
