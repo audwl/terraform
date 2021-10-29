@@ -2,7 +2,7 @@ resource "aws_lb_target_group" "mjkim_lbtg" {
     name = "mjkim-lbtg"
     port = 80
     protocol = "HTTP"
-    vpc_id = aws_vpc.mjkim-vpc.id
+    vpc_id = aws_vpc.mjkim_vpc.id
 
     health_check {
       enabled = true
