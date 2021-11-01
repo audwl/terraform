@@ -1,6 +1,6 @@
-# 가용영역 a의 Public Subnet
+ #가용영역 a의 Public Subnet
 resource "aws_subnet" "mjkim_puba" {
-    vpc_id = aws_vpc.mjkim_vpc.id
+    vpc_id =aws_vpc.mjkim_vpc.id  
     cidr_block = "10.0.0.0/24"
     availability_zone = "ap-northeast-2a"
     tags = {
@@ -37,4 +37,22 @@ resource "aws_subnet" "mjkim_pric" {
       Name = "mjkim-pric"
     }
   
+}
+  resource "aws_subnet" "mjkim_pridba" {
+  vpc_id            = aws_vpc.mjkim_vpc.id
+  cidr_block        = "10.0.4.0/24"
+  availability_zone = "ap-northeast-2a"
+
+  tags = {
+    Name = "mjkim-pridba"
+  }
+}
+resource "aws_subnet" "mjkim_pridbc" {
+  vpc_id            = aws_vpc.mjkim_vpc.id
+  cidr_block        = "10.0.5.0/24"
+  availability_zone = "ap-northeast-2c"
+
+  tags = {
+    Name = "mjkim-pridbc"
+  }
 }
